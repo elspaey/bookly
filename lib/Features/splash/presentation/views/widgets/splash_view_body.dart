@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_11/Features/home/presentation/views/home_view.dart';
 import 'package:flutter_application_11/core/assets.dart';
+import 'package:flutter_application_11/core/constants.dart';
+import 'package:get/get.dart';
 
 import 'sliding_text.dart';
 
@@ -17,16 +20,12 @@ class _splashViewBodyState extends State<splashViewBody>
   @override
   void initState() {
     super.initState();
-    _animationController =
-        AnimationController(vsync: this, duration: const Duration(seconds: 1));
-    _animation = Tween<Offset>(begin: const Offset(0, 10), end: Offset.zero)
-        .animate(_animationController);
-    _animationController.forward();
+    initSlidingAnimation();
+    navigateToHome();
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     _animationController.dispose();
   }
@@ -44,5 +43,23 @@ class _splashViewBodyState extends State<splashViewBody>
         slidingText(animation: _animation),
       ],
     );
+  }
+
+////////////////////
+
+  void initSlidingAnimation() {
+    _animationController =
+        AnimationController(vsync: this, duration: const Duration(seconds: 1));
+    _animation = Tween<Offset>(begin: const Offset(0, 10), end: Offset.zero)
+        .animate(_animationController);
+    _animationController.forward();
+  }
+
+//////////////////
+  void navigateToHome() {
+    Future.delayed(const Duration(seconds: 2), () {
+      Get.to(() => const HomeView(),
+          transition: Transition.fade, duration: kTransetantionDuration);
+    });
   }
 }
