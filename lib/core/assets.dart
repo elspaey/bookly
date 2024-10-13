@@ -1,3 +1,4 @@
 class myAssets {
-  static const logo = "assets/images/Logo.png";
+  static const logo = "assets/images/BOOKLY.png";
+  static const testImage = "assets/images/test_image.png";
 }
