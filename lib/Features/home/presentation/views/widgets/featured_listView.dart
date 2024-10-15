@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/helper widgets/custom_used_item.dart';
+import '../../../../../core/utils/helper widgets/custom_used_item.dart';
 
 class featuredBooksListView extends StatelessWidget {
   const featuredBooksListView({super.key});

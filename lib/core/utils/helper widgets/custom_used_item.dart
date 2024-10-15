@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../assets.dart';
+import '../../assets.dart';
 
 class customUsedItem extends StatelessWidget {
   const customUsedItem(
@@ -10,7 +10,7 @@ class customUsedItem extends StatelessWidget {
   final double thAspectratioOrValue;
   final EdgeInsetsGeometry thPadding;
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
     return Padding(
       padding: thPadding,
       child: SizedBox(

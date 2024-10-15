@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../styles.dart';
+import '../../styles.dart';
 
 class helperTextWidget extends StatelessWidget {
   const helperTextWidget({
@@ -10,12 +10,14 @@ class helperTextWidget extends StatelessWidget {
     this.widthValueTopSizedBox = 0,
     this.hightValueButtomSizedBox = 0,
     this.widthValueButtomSizedBox = 0,
+    this.textStyle = Styles.TextStyleMedium18,
   });
   final double hightValueTopSizedBox,
       widthValueTopSizedBox,
       hightValueButtomSizedBox,
       widthValueButtomSizedBox;
   final String textValue;
+  final TextStyle textStyle;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -26,7 +28,7 @@ class helperTextWidget extends StatelessWidget {
             height: hightValueTopSizedBox,
             width: widthValueTopSizedBox,
           ),
-          Text(textValue, style: Styles.titleMedium),
+          Text(textValue, style: textStyle),
           SizedBox(
             height: hightValueButtomSizedBox,
             width: widthValueButtomSizedBox,
