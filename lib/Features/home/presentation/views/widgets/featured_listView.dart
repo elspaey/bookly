@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'custom_listView_item.dart';
+import '../../../../../core/helper widgets/custom_used_item.dart';
 
 class featuredBooksListView extends StatelessWidget {
   const featuredBooksListView({super.key});
@@ -17,7 +17,9 @@ class featuredBooksListView extends StatelessWidget {
           itemBuilder: (context, index) {
             return const Padding(
               padding: EdgeInsets.only(right: 15.1, top: 15),
-              child: featuredListViewItem(),
+              child: customUsedItem(
+                thAspectratioOrValue: 2.7 / 4,
+              ),
             );
           },
         ),
