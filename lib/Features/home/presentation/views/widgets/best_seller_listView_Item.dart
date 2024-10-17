@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_11/core/styles.dart';
 import 'package:flutter_application_11/core/utils/helper%20widgets/helper_text_widget.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../core/assets.dart';
+import 'book_Rating.dart';
 
 class bestSellerlistViewItem extends StatelessWidget {
   const bestSellerlistViewItem({super.key});
@@ -44,10 +46,16 @@ class bestSellerlistViewItem extends StatelessWidget {
                       TextWidget(
                           thePadding: EdgeInsets.zero,
                           theTextContent: "J.K. Rowling"),
-                      TextWidget(
-                          textStyle: Styles.textStyleBold20,
-                          thePadding: EdgeInsets.zero,
-                          theTextContent: "19.99 €")
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          TextWidget(
+                              textStyle: Styles.textStyleBold20,
+                              thePadding: EdgeInsets.zero,
+                              theTextContent: "19.99 €"),
+                          bookRating(),
+                        ],
+                      )
                     ],
                   ),
                 ),

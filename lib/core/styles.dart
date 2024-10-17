@@ -7,8 +7,7 @@ abstract class Styles {
     fontWeight: FontWeight.w400,
   );
   static const textStyleRegular20 = TextStyle(
-    
-    fontSize: 23,
+    fontSize: 20,
     fontWeight: FontWeight.w400,
     fontFamily: kgtsectrafont,
   );
