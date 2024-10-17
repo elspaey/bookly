@@ -10,7 +10,7 @@ class helperTextWidget extends StatelessWidget {
     this.widthValueTopSizedBox = 0,
     this.hightValueButtomSizedBox = 0,
     this.widthValueButtomSizedBox = 0,
-    this.textStyle = Styles.TextStyleMedium18,
+    this.textStyle = Styles.textStyleMedium18,
   });
   final double hightValueTopSizedBox,
       widthValueTopSizedBox,

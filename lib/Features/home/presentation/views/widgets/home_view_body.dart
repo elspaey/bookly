@@ -17,7 +17,7 @@ class HomeViewBody extends StatelessWidget {
         helperTextWidget(
           hightValueTopSizedBox: 50,
           textValue: "Best Seller",
-          textStyle: Styles.TextStyleSemiBold18,
+          textStyle: Styles.textStyleSemiBold18,
           hightValueButtomSizedBox: 20,
         ),
         bestSellerlistView()
