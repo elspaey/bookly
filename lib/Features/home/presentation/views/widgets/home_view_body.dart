@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_11/core/styles.dart';
 import '../../../../../core/utils/helper widgets/helper_text_widget.dart';
-import 'best_seller_listView.dart';
+import 'best_seller_listView_Item.dart';
 import 'custom_app_bar.dart';
 import 'featured_listView.dart';
 
@@ -14,13 +14,13 @@ class HomeViewBody extends StatelessWidget {
       children: [
         customAppBar(),
         featuredBooksListView(),
-        helperTextWidget(
+        TextWidget(
           hightValueTopSizedBox: 50,
-          textValue: "Best Seller",
+          theTextContent: "Best Seller",
           textStyle: Styles.textStyleSemiBold18,
           hightValueButtomSizedBox: 20,
         ),
-        bestSellerlistView()
+        bestSellerlistViewItem()
       ],
     );
   }
