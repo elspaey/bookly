@@ -10,25 +10,24 @@ class customUsedItem extends StatelessWidget {
   final double thAspectratioOrValue;
   final EdgeInsetsGeometry thPadding;
   @override
-  Widget build(BuildContext context) { 
+  Widget build(BuildContext context) {
     return Padding(
-      padding: thPadding,
-      child: SizedBox(
-        height: thAspectratioOrValue,
-        // height: MediaQuery.of(context).size.height * .3,
-        child: AspectRatio(
-          aspectRatio: thAspectratioOrValue,
-          child: Container(
-            width: thAspectratioOrValue,
-            height: thAspectratioOrValue,
-            // height: MediaQuery.of(context).size.height * .25,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16.0),
-                image: const DecorationImage(
-                    fit: BoxFit.fill, image: AssetImage(myAssets.testImage))),
-          ),
-        ),
-      ),
-    );
+        padding: thPadding,
+        child: SizedBox(
+          height: thAspectratioOrValue,
+          // height: MediaQuery.of(context).size.height * .3,
+          child: AspectRatio(
+              aspectRatio: thAspectratioOrValue,
+              child: Container(
+                width: thAspectratioOrValue,
+                height: thAspectratioOrValue,
+                // height: MediaQuery.of(context).size.height * .25,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16.0),
+                    image: const DecorationImage(
+                        fit: BoxFit.fill,
+                        image: AssetImage(myAssets.testImage))),
+              )),
+        ));
   }
 }
