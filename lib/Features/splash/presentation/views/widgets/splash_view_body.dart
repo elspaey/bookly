@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_11/Features/home/presentation/views/home_view.dart';
 import 'package:flutter_application_11/core/assets.dart';
-import 'package:flutter_application_11/core/constants.dart';
-import 'package:get/get.dart';
+import 'package:flutter_application_11/core/utils/helper%20widgets/app_router.dart';
+import 'package:go_router/go_router.dart';
 
 import 'sliding_text.dart';
 
@@ -19,7 +18,7 @@ class _splashViewBodyState extends State<splashViewBody>
   late Animation<Offset> _animation;
   @override
   void initState() {
-    super.initState(); 
+    super.initState();
     initSlidingAnimation();
     navigateToHome();
   }
@@ -58,8 +57,9 @@ class _splashViewBodyState extends State<splashViewBody>
 //////////////////
   void navigateToHome() {
     Future.delayed(const Duration(seconds: 2), () {
-      Get.to(() => const HomeView(),
-          transition: Transition.fade, duration: kTransetantionDuration);
+      // Get.to(() => const HomeView(),
+      //     transition: Transition.fade, duration: kTransetantionDuration);
+      GoRouter.of(context).push(AppRouter.khomeView);
     });
   }
 }
