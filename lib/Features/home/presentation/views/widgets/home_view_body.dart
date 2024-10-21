@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_11/core/styles.dart';
 import '../../../../../core/utils/helper widgets/helper_text_widget.dart';
 import 'best_seller_listView_Item.dart';
-import 'custom_app_bar.dart';
+import 'custom_appBar_body.dart';
 import 'featured_listView.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -14,7 +14,7 @@ class HomeViewBody extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            customAppBar(),
+            customAppBarBody(),
             featuredBooksListView(),
             TextWidget(
               hightValueTopSizedBox: 50,
