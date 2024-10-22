@@ -17,9 +17,7 @@ abstract class Styles {
     fontFamily: kgtsectrafont,
   );
   static const textStyleMedium14 = TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.w500,
-  );
+      fontSize: 14, fontWeight: FontWeight.w500, color: Color(0xff707070));
   static const textStyleMedium16 = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w500,

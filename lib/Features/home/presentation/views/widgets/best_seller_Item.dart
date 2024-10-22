@@ -6,7 +6,7 @@ import 'package:flutter_application_11/core/utils/helper%20widgets/helper_text_w
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/assets.dart';
-import 'book_Rating.dart';
+import '../../../../../core/utils/helper widgets/book_Rating.dart';
 
 class bestSellerItem extends StatelessWidget {
   const bestSellerItem({super.key});
@@ -50,7 +50,7 @@ class bestSellerItem extends StatelessWidget {
                         ),
                         TextWidget(
                             thePadding: EdgeInsets.zero,
-                            theTextContent: "J.K. Rowling"),
+                            theTextContent: "J.K. Rowling",textStyle: Styles.textStyleMedium14,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
