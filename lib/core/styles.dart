@@ -34,10 +34,8 @@ abstract class Styles {
     fontSize: 18,
     fontWeight: FontWeight.w600,
   );
-  static const textStyleBold20 = TextStyle(
-    fontSize: 20,
-    fontWeight: FontWeight.bold,
-  );
+  static const textStyleBold20 =
+      TextStyle(fontSize: 20, fontWeight: FontWeight.bold, );
 }
 ///fontWeights
 // 14

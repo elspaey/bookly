@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/helper widgets/custom_used_item.dart';
 
 class featuredBooksListView extends StatelessWidget {
-  const featuredBooksListView({super.key});
-
+  const featuredBooksListView({super.key, });
   @override
   Widget build(BuildContext context) {
     return Padding(
