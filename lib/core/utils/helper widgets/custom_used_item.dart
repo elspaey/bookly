@@ -8,9 +8,11 @@ class customUsedItem extends StatelessWidget {
   const customUsedItem(
       {super.key,
       this.thAspectratioOrValue = 0,
-      this.thPadding = const EdgeInsets.all(0)});
+      this.thPadding = const EdgeInsets.all(0),
+      this.theImage});
   final double thAspectratioOrValue;
   final EdgeInsetsGeometry thPadding;
+  final ImageProvider? theImage;
   @override
   Widget build(BuildContext context) {
     return Padding(
