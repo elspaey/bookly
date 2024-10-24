@@ -38,6 +38,8 @@ class TextWidget extends StatelessWidget {
             width: widthValueTopSizedBox,
           ),
           AutoSizeText(
+            maxFontSize: 26,
+            minFontSize: 10,
             maxLines: countLine,
             theTextContent,
             style: textStyle,

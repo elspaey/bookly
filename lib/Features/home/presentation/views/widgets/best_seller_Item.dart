@@ -9,12 +9,17 @@ import '../../../../../core/assets.dart';
 import '../../../../../core/utils/helper widgets/book_Rating.dart';
 
 class bestSellerItem extends StatelessWidget {
-  const bestSellerItem({super.key});
-
+  const bestSellerItem({
+    super.key,
+    this.thPadding = const EdgeInsets.only(left: 30),
+    this.thPaddingInsideDetails = const EdgeInsets.only(right: 47, left: 30),
+  });
+  final EdgeInsetsGeometry thPadding;
+  final EdgeInsetsGeometry thPaddingInsideDetails;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 30),
+      padding: thPadding,
       child: GestureDetector(
         onTap: () {
           GoRouter.of(context).push(AppRouter.kbookDetailsView);
@@ -34,10 +39,10 @@ class bestSellerItem extends StatelessWidget {
                           image: AssetImage(myAssets.testImage))),
                 ),
               ),
-              const Expanded(
+              Expanded(
                 child: Padding(
-                  padding: EdgeInsets.only(right: 47, left: 30),
-                  child: SizedBox(
+                  padding: thPaddingInsideDetails,
+                  child: const SizedBox(
                     width: double.infinity,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,8 +54,10 @@ class bestSellerItem extends StatelessWidget {
                           textStyle: Styles.textStyleRegular20,
                         ),
                         TextWidget(
-                            thePadding: EdgeInsets.zero,
-                            theTextContent: "J.K. Rowling",textStyle: Styles.textStyleMedium14,),
+                          thePadding: EdgeInsets.zero,
+                          theTextContent: "J.K. Rowling",
+                          textStyle: Styles.textStyleMedium14,
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
