@@ -4,5 +4,5 @@ import 'package:flutter_application_11/core/errors/failure.dart';
 
 abstract class homeRepos {
   Future<Either<Failure, List<BookEntity>>> fetchFuturedBooks();
-  Future<Either<Failure, List<BookEntity>>> fetchNewstBooks();
+  Future<Either<Failure, List<BookEntity>>> fetchNewestBooks();
 }
