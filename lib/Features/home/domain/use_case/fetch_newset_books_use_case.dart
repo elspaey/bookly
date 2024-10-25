@@ -7,14 +7,14 @@ abstract class useCase<Type, param> {
   Future<Either<Failure, Type>> call([param param]);
 }
 
-class FetchFeaturedBooksUseCase extends useCase<List<BookEntity>, void> {
+class FetchNewsetBooksUseCase extends useCase<List<BookEntity>, void> {
   final homeRepos homeRepo;
 
-  FetchFeaturedBooksUseCase(this.homeRepo);
+  FetchNewsetBooksUseCase(this.homeRepo);
 
   @override
   Future<Either<Failure, List<BookEntity>>> call([void param]) async {
     // TODO: implement call
-    return await homeRepo.fetchFuturedBooks();
+    return await homeRepo.fetchNewestBooks();
   }
 }
