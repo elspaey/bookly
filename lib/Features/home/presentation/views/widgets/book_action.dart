@@ -20,7 +20,6 @@ class bookAction extends StatelessWidget {
         )),
         Expanded(
             child: CustomButton(
-              
           textButton: "Free preview",
           borderRedious: BorderRadius.only(
               topRight: Radius.circular(12), bottomRight: Radius.circular(12)),
