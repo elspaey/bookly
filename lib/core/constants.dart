@@ -5,3 +5,4 @@ const kTransetantionDuration = Duration(milliseconds: 250);
 const kgtsectrafont = "GT Sectra Fine";
 const klogo = "assets/images/BOOKLY.png";
 const kFeaturedBox = "Featured_box";
+const kNewestBox = "Newst_box";
