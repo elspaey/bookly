@@ -15,5 +15,7 @@ class HomeLocalDatasourceimpl extends HomeLocalDataSource {
   }
 
   @override
-  List<BookEntity> ftchNewestBooks() {}
+  List<BookEntity> ftchNewestBooks() {
+    return Hive.box<BookEntity>(kNewestBox).values.toList();
+  }
 }
