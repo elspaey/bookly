@@ -8,13 +8,14 @@ class FeaturedBooksInitial extends FeaturedBooksState {}
 class FeaturedBooksloading extends FeaturedBooksState {}
 
 class FeaturedBooksSuccess extends FeaturedBooksState {
-  final String errMessage;
 
-  FeaturedBooksSuccess(this.errMessage);
+    final List<BookEntity> books;
+
+  FeaturedBooksSuccess(this.books);
 }
 
 class FeaturedBooksFailure extends FeaturedBooksState {
-  final List<BookEntity> books;
+    final String errMessage;
 
-  FeaturedBooksFailure(this.books);
+  FeaturedBooksFailure(this.errMessage);
 }
