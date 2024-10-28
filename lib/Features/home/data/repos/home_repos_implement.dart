@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter_application_11/Features/home/data/data_scource/home_local_dataSource.dart';
 import 'package:flutter_application_11/Features/home/data/data_scource/home_remote_data_source.dart';
 import 'package:flutter_application_11/Features/home/domain/entities/book_entity.dart';
@@ -13,29 +14,37 @@ class HomeReposImplement extends homeRepos {
       {required this.homeRemoteDataSource, required this.homeLocalDataSource});
   @override
   Future<Either<Failure, List<BookEntity>>> fetchFuturedBooks() async {
+    List<BookEntity> bookList;
     try {
-      var booksList = homeLocalDataSource.ftchFeatureBooks();
-      if (booksList.isNotEmpty) {
-        return right(booksList);
+      bookList = homeLocalDataSource.ftchFeatureBooks();
+      if (bookList.isNotEmpty) {
+        return right(bookList);
       }
-      var books = await homeRemoteDataSource.ftchFeatureBooks();
-      return right(books);
+      bookList = await homeRemoteDataSource.ftchFeatureBooks();
+      return right(bookList);
     } catch (e) {
-      return left(Failure());
+      if (e is DioException) {
+        return left(serverFailure.fromDioError(e));
+      }
+      return left(serverFailure(e.toString()));
     }
   }
 
   @override
   Future<Either<Failure, List<BookEntity>>> fetchNewestBooks() async {
     try {
-      var booksList = homeLocalDataSource.ftchNewestBooks();
-      if (booksList.isNotEmpty) {
-        return right(booksList);
+      List<BookEntity> books;
+      books = homeLocalDataSource.ftchNewestBooks();
+      if (books.isNotEmpty) {
+        return right(books);
       }
-      var books = await homeRemoteDataSource.ftchNewestBooks();
+      books = await homeRemoteDataSource.ftchNewestBooks();
       return right(books);
     } catch (e) {
-      return left(Failure());
+      if (e is DioException) {
+        return left(serverFailure.fromDioError(e));
+      }
+      return left(serverFailure(e.toString()));
     }
   }
 }
